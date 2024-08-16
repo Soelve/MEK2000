@@ -43,7 +43,7 @@ for n in range(0,LL,1):
     yy = yy + Coeff[n]*xx**(LL-n-1)
     
 # Plottar punkta - saman med det linterpolerande polynomet
-plt.figure(5)
+plt.figure(1)
 plt.clf()
 # Punkta
 plt.plot(x, y,'rx', label = 'Punkt', markeredgewidth = 2, markersize= 10)
