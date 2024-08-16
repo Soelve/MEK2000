@@ -1,5 +1,5 @@
 """
- Dette skripte konstruerar eit interpolerande polynom for eit sett med punkt.
+ Dette skriptet konstruerar eit interpolerande polynom for eit sett med punkt.
  Dette settet er hardkoda i starten av skriptet.
  Koeffisientane i polynomet blir bestemt ved å sette opp Vandermonde-
  matrisa, invertere denne og gange ho med søyelvektoren beståande av dei
