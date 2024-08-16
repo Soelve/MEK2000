@@ -34,7 +34,7 @@ InvVanMat = np.linalg.inv(VanMat)
 Coeff = np.matmul(InvVanMat, y)
 
 # Lagar vektor for å plotte polynomet (100 punkt)
-xx = np.linspace(x[0]-0.2,x[-1]+0.2,100)    # x[-1] is the last point in x
+xx = np.linspace(x[0]-0.2,x[-1]+0.2,100)    # x[-1] er det siste punket i x
 # Allokerar vektor for y-verdiane
 yy = np.zeros(100)
 
