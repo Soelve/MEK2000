@@ -23,7 +23,6 @@ LL = len(x)                 # Antal punkt
 # Allokerar Vandermonde-matrisa (berre null-verdiar)
 VanMat = np.zeros((LL, LL))
 for n in range(0,LL):
-    # VanMat[:,n] = np.power(x,LL-n-1)    # Tilordnar søyle for sløye
     VanMat[:,n] = x**(LL-n-1)    # Tilordnar søyle for sløye
 
 # Bestemmer koeffisientane ved å invertere matrisa
