@@ -52,15 +52,19 @@ Coeff = np.matmul(InvVanMat, y)
 # Allokerar vektor for y-verdiane til polynomet
 yPoly = np.zeros(200)
 # Reknar ut y-verdiane frå det interpolerande polynomet
-for n in range(0,LL,1):
+for n in range(0,LL):
     yPoly = yPoly + Coeff[n]*xDense**(LL-n-1)
     
 # Plottar punkta - saman med det linterpolerande polynomet
+plt.figure(1)
+plt.clf()
 plt.plot(xDense, yDense, 'b-', label = 'Funksjon')      # Funksjonen
 plt.plot(x, y, 'rx', label = 'Samplepunkt')             # Punkta
-plt.plot(x, y, 'k--', label = 'Samplepunkt')             # Punkta
+plt.plot(x, y, 'k--', label = 'Samplepunkt')            # Punkta, igjen
 plt.plot(xDense, yPoly, 'g--', label = 'Polynom')       # Interpolerande polynom
+plt.grid()
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
 plt.ylim(-.5, 1.5)
+plt.show()
