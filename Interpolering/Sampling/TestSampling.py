@@ -33,8 +33,12 @@ x = np.linspace(xMin, xMax, N)
 y = funk(x)
 
 # Plottar
-plt.plot(xDense, yDense, 'b-')
+plt.figure(1)
+plt.clf()
+plt.plot(x_dense, y_dense, 'b-')
 plt.plot(x, y, 'rx')
 plt.plot(x, y, 'y--')
+plt.grid()
 plt.xlabel('x')
 plt.ylabel('y')
+plt.show()
