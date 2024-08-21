@@ -20,13 +20,13 @@ xMin = -1
 xMax = 1
 
 # Antal punkt i samplinga
-N = 20
+N = 7
 
 ###### Slutt på inputs #############
 
 # Punkt for å plotte funksjonen (200 punkt)
-xDense = np.linspace(xMin, xMax, 200)
-yDense = funk(xDense)
+x_dense = np.linspace(xMin, xMax, 200)
+y_dense = funk(x_dense)
 
 # Samplepunkta
 x = np.linspace(xMin, xMax, N)
@@ -53,17 +53,20 @@ Coeff = np.matmul(InvVanMat, y)
 yPoly = np.zeros(200)
 # Reknar ut y-verdiane frå det interpolerande polynomet
 for n in range(0,LL,1):
-    yPoly = yPoly + Coeff[n]*xDense**(LL-n-1)
+    yPoly = yPoly + Coeff[n]*x_dense**(LL-n-1)
 
 # Kubisk spline-interpolering
 Cspline = CubicSpline(x, y)    
        
 # Plottar punkta - saman med det linterpolerande polynomet
-plt.plot(xDense, yDense, 'b-', label = 'Funksjon')      # Funksjonen
+plt.figure(1)
+plt.clf()
+plt.plot(x_dense, y_dense, 'b-', label = 'Funksjon')      # Funksjonen
 plt.plot(x, y, 'rx', label = 'Samplepunkt')             # Punkta
-plt.plot(xDense, yPoly, 'g--', label = 'Polynom')       # Interpolerande polynom
-plt.plot(xDense, Cspline(xDense), 'm-.', label = 'Kubisk spline') # Spline
+plt.plot(x_dense, yPoly, 'g--', label = 'Polynom')       # Interpolerande polynom
+plt.plot(x_dense, Cspline(x_dense), 'm-.', label = 'Kubisk spline') # Spline
 plt.xlabel('x')
 plt.ylabel('y')
+plt.grid()
 plt.legend()
 plt.ylim(-0.5, 1.5)
