@@ -29,8 +29,3 @@ Svar = np.matmul(Ainv, b)
 
 # Skriv svaret til skjerm
 print('Svaret er', Svar)
-
-# Reknar ut temp:
-t=11+47/60
-p = Svar[0]*t**3 + Svar[1]*t**2 + Svar[2]*t + Svar[3]
-print(p) 
