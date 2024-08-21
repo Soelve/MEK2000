@@ -29,6 +29,8 @@ for n in range(0,LL):
 InvVanMat = np.linalg.inv(VanMat)
 # Finn koeffisientane ved å multiplisere den inverterte matrisa med y-vektoren
 Coeff = np.matmul(InvVanMat, y)
+# Skriv ut koeffisentane
+print('Koeffisientar: ', Coeff)
 
 # Lagar vektor for å plotte polynomet (100 punkt)
 xx = np.linspace(x[0]-0.2, x[-1]+0.2, 100)    # x[-1] er det siste punket i x
