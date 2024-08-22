@@ -16,8 +16,8 @@ def funk(x):
     return np.sin(np.pi*x)
 
 # Det aktuelle intervallet
-xMin = -2.0
-xMax = 2.0
+x_min = -2.0
+x_max = 2.0
 
 # Antal punkt i samplinga
 N = 15
@@ -25,11 +25,11 @@ N = 15
 ###### Slutt på inputs #############
 
 # Punkt for å plotte funksjonen (200 punkt)
-xDense = np.linspace(xMin, xMax, 200)
-yDense = funk(xDense)
+x_dense = np.linspace(x_min, x_max, 200)
+y_dense = funk(x_dense)
 
 # Samplepunkta
-x = np.linspace(xMin, xMax, N)
+x = np.linspace(x_min, x_max, N)
 y = funk(x)
 
 # Plottar
