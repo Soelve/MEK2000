@@ -2,7 +2,7 @@
  Dette skriptet konstruerar ein kvadratisk spline for eit sett med fire punkt.
  Dette settet er hardkoda i starten av skriptet.
  Koeffisientane i polynoma blir bestemt ved å sette opp eit lineært liknings-
- system for problemet. Dette systemet blir løyst ve dat koeffisientmatrisa 
+ system for problemet. Dette systemet blir løyst ved at koeffisientmatrisa 
  sett opp og invertert.
 """
 # Bibliotek
@@ -46,7 +46,7 @@ plt.plot(x, y,'kx', label = 'Punkt')            # Punkta
 for n in range(0,3):   
     # Lagar vektor for å plotte polynomet (50 punkt)
     xx = np.linspace(x[n],x[n+1], 50)    
-    # Allokerar vektor for y-verdiane
+    # Vektor med y-verdiane
     a = Coeff[0+3*n]
     b = Coeff[1+3*n]
     c = Coeff[2+3*n]
