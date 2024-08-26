@@ -43,7 +43,7 @@ plt.plot(x, y,'kx', label = 'Punkt')            # Punkta
 for n in range(0,3):   
     # Lagar vektor for å plotte polynomet (50 punkt)
     xx = np.linspace(x[n],x[n+1], 50)    
-    # Allokerar vektor for y-verdiane
+    # Vektor med y-verdiane
     a = Coeff[0+2*n]
     b = Coeff[1+2*n]
     yy = a*xx + b
