@@ -39,7 +39,7 @@ Coeff = np.matmul(MatInv, HoegreSide)
 #
 plt.plot(x, y,'kx', label = 'Punkt')            # Punkta
 
-# Loopar over dei tre andregradsfunksjonane
+# Loopar over dei tre førstegradsfunksjonane
 for n in range(0,3):   
     # Lagar vektor for å plotte polynomet (50 punkt)
     xx = np.linspace(x[n],x[n+1], 50)    
