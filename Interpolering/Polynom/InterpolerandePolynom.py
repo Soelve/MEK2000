@@ -48,9 +48,11 @@ plt.clf()
 plt.plot(x, y,'rx', label = 'Punkt', markeredgewidth = 2, markersize= 10)
 # Interpolerande polynom
 plt.plot(xx, yy,'b-.', label = 'Polynom', linewidth = 2)       
+# Tekst på aksane
 plt.xlabel('x')
 plt.ylabel('y')
-plt.grid()
+# Rutenett
+plt.grid(visible = True)
+# Tekstboks med forklaring til grafane
 plt.legend()
-
 plt.show()
