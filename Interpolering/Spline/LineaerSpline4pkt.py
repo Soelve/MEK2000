@@ -53,4 +53,5 @@ for n in range(0,3):
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
+plt.grid(visible = True)
 plt.show()
