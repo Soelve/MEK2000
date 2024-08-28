@@ -48,7 +48,9 @@ for n in range(0,3):
     b = Coeff[1+2*n]
     yy = a*xx + b
     plt.plot(xx, yy, label = 'p_{}'.format(n))
-    
+
+# Tekst på aksane, rutenett og tekstboks med forklaring
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
+plt.show()
