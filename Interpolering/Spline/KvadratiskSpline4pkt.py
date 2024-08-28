@@ -52,7 +52,10 @@ for n in range(0,3):
     c = Coeff[2+3*n]
     yy = a*xx**2 + b*xx + c
     plt.plot(xx, yy, label = 'p_{}'.format(n))
-    
+
+# Tekst på aksane, forklaringsboks og rutenett
 plt.xlabel('x')
 plt.ylabel('y')
+plt.grid(visible = True)
 plt.legend()
+plt.show()
