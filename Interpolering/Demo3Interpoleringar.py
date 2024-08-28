@@ -79,6 +79,8 @@ for n in range(0,2):
     yy = a*xx**2 + b*xx + c
     plt.plot(xx, yy, '--', label = 'p_{}, kvadratisk spline'.format(n))
     
+# Tekst på aksane - og rutenett
 plt.xlabel('x')
 plt.ylabel('y')
-plt.legend()
+plt.legend(visible = True)
+plt.show()
