@@ -33,3 +33,4 @@ ax.plot(Aminval, Bminval, np.log(Cminval), 'rx')
 # Tekst på aksane
 ax.set_xlabel('a')
 ax.set_ylabel('b')
+plt.show()
