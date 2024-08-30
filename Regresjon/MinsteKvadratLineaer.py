@@ -19,14 +19,14 @@ x = np.transpose(x) 				# Transponerar x
 y = np.transpose(y) 				# Transponerar y
 
 # Set opp A-matrisa
-A = np.array([np.ones(N),x])
+A = np.array([np.ones(N), x])
 A = np.transpose(A)
 
 # Bestemmer koeffisientane i regresjonslinja
-InvMat = np.matmul(np.transpose(A),A)          	# A^T A
+InvMat = np.matmul(np.transpose(A), A)         	# A^T A
 InvMat = np.linalg.inv(InvMat)                 	# inversen  til A^T A
-ATy = np.matmul(np.transpose(A),y)
-Coeff = np.matmul(InvMat,ATy)
+ATy = np.matmul(np.transpose(A), y)
+Coeff = np.matmul(InvMat, ATy)
 
 # Hentar ut koeffisientane
 a = Coeff[0]
@@ -37,6 +37,7 @@ print("a =", a)
 print("b =", b)
 
 # Plottar punkta og regresjonslinja
-plt.plot(x,y,'rx')  
-plt.plot(x,a+b*x,'k-')
-plt.grid()                           		# Legg på rutenett  
+plt.plot(x, y, 'rx')  
+plt.plot(x, a+b*x, 'k-')
+plt.grid(visible = True)                           		# Legg på rutenett  
+plt.show()
