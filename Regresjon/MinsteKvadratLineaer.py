@@ -37,7 +37,11 @@ print("a =", a)
 print("b =", b)
 
 # Plottar punkta og regresjonslinja
+plt.figure(1)
+plt.clf()
 plt.plot(x, y, 'rx')  
 plt.plot(x, a+b*x, 'k-')
+plt.xlabel('x')
+plt.ylabel('y')
 plt.grid(visible = True)                           		# Legg på rutenett  
 plt.show()
