@@ -50,7 +50,7 @@ Coeff = np.matmul(MatInv, HoegreSide)
 #
 plt.plot(x, y,'kx', label = 'Punkt')            # Punkta
 
-# Loopar over dei tre andregradsfunksjonane
+# Loopar over dei tre tredjegradsfunksjonane
 for n in range(0,3):   
     # Lagar vektor for å plotte polynomet (50 punkt)
     xx = np.linspace(x[n],x[n+1], 50)    
@@ -61,7 +61,9 @@ for n in range(0,3):
     d = Coeff[3+4*n]
     yy = a*xx**3 + b*xx**2 + c*xx + d
     plt.plot(xx, yy, label = 'p_{}'.format(n))
-    
+
+# Tekst på aksane
 plt.xlabel('x')
 plt.ylabel('y')
+plt.show()
 plt.legend()
