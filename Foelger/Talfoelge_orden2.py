@@ -1,7 +1,6 @@
-"""
-Dette skriptet reknar ut dei n foerste ledda i ei talfoelge gitt
-ved ei differenslikning av andre orden
-All input er hard-koda
+"""Dette skriptet reknar ut dei n foerste ledda i ei talfoelge gitt
+ved ei differenslikning av andre orden.
+All input er hard-koda.
 """
 
 # Maksimal n
@@ -17,7 +16,7 @@ print('n= 1 , a_n=', a1)
 # Initierar a og aOld
 a = a1
 aOld = a0
-for n in range(2,Nmax+1):      # Det der med Nmax+1 er ganske forvirrande...
+for n in range(2, Nmax+1):      # Det der med Nmax+1 er ganske forvirrande...
     # Oppdaterar gamle a
     aOlder = aOld
     aOld = a
