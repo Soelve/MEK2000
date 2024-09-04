@@ -42,6 +42,8 @@ print(f'p_2 = {Coeff[4]:.2f}x + {Coeff[5]:.2f}')
 #
 # Plottar splinen - saman med punkta som skal interpolerast
 #
+plt.figure(1)
+plt.clf()
 plt.plot(x, y,'kx', label = 'Punkt')            # Punkta
 
 # Loopar over dei tre førstegradsfunksjonane
