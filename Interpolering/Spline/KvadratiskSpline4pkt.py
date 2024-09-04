@@ -37,9 +37,9 @@ MatInv = np.linalg.inv(Mat)
 Coeff = np.matmul(MatInv, HoegreSide)
 
 # Skriv splinen til skjerm
-print(f'p_0 = {Coeff[0]:.2f}x**2 + {Coeff[1]:.2f}*x + {Coeff[2]:.2f}')
-print(f'p_1 = {Coeff[3]:.2f}x**2 + {Coeff[4]:.2f}*x + {Coeff[5]:.2f}')
-print(f'p_2 = {Coeff[6]:.2f}x**2 + {Coeff[7]:.2f}*x + {Coeff[8]:.2f}')
+print(f'p_0 = {Coeff[0]:.2f} x**2 + {Coeff[1]:.2f} x + {Coeff[2]:.2f}')
+print(f'p_1 = {Coeff[3]:.2f} x**2 + {Coeff[4]:.2f} x + {Coeff[5]:.2f}')
+print(f'p_2 = {Coeff[6]:.2f} x**2 + {Coeff[7]:.2f} x + {Coeff[8]:.2f}')
 
 
 #
