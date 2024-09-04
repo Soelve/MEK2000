@@ -1,9 +1,8 @@
-"""
- Dette skriptet konstruerar ein kubisk spline for eit sett med fire punkt.
- Dette settet er hardkoda i starten av skriptet.
- Koeffisientane i polynoma blir bestemt ved å sette opp eit lineært liknings-
- system for problemet. Dette systemet blir løyst ve dat koeffisientmatrisa 
- sett opp og invertert.
+"""Dette skriptet konstruerar ein kubisk spline for eit sett med fire punkt.
+Dette settet er hardkoda i starten av skriptet.
+Koeffisientane i polynoma blir bestemt ved å sette opp eit lineært liknings-
+system for problemet. Dette systemet blir løyst ve dat koeffisientmatrisa 
+sett opp og invertert.
 """
 # Bibliotek
 import numpy as np
@@ -45,9 +44,18 @@ MatInv = np.linalg.inv(Mat)
 # Finn koeffisientane ved å multiplisere den inverterte matrisa med y-vektoren
 Coeff = np.matmul(MatInv, HoegreSide)
 
+
+# Skriv splinen til skjerm
+print(f'p_0 = {Coeff[0]:.2f} x**3 + {Coeff[1]:.2f} x**2 + {Coeff[2]:.2f} x + {Coeff[3]:.2f}')
+print(f'p_1 = {Coeff[4]:.2f} x**3 + {Coeff[5]:.2f} x**2 + {Coeff[6]:.2f} x + {Coeff[7]:.2f}')
+print(f'p_2 = {Coeff[8]:.2f} x**3 + {Coeff[9]:.2f} x**2 + {Coeff[10]:.2f} x + {Coeff[11]:.2f}')
+
+
 #
 # Plottar splinen - saman med punkta som skal interpolerast
 #
+plt.figure(1)
+plt.clf()
 plt.plot(x, y,'kx', label = 'Punkt')            # Punkta
 
 # Loopar over dei tre tredjegradsfunksjonane
@@ -65,5 +73,6 @@ for n in range(0,3):
 # Tekst på aksane
 plt.xlabel('x')
 plt.ylabel('y')
-plt.show()
+plt.grid(visible = True)
 plt.legend()
+plt.show()
