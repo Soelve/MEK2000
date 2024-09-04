@@ -1,9 +1,8 @@
-"""
- Dette skriptet konstruerar ein lineær spline for eit sett med fire punkt.
- Dette settet er hardkoda i starten av skriptet.
- Koeffisientane i polynoma blir bestemt ved å sette opp eit lineært liknings-
- system for problemet. Dette systemet blir løyst ve dat koeffisientmatrisa 
- sett opp og invertert.
+"""Dette skriptet konstruerar ein lineær spline for eit sett med fire punkt.
+Dette settet er hardkoda i starten av skriptet.
+Koeffisientane i polynoma blir bestemt ved å sette opp eit lineært liknings-
+system for problemet. Dette systemet blir løyst ve dat koeffisientmatrisa 
+sett opp og invertert.
 """
 # Bibliotek
 import numpy as np
@@ -33,6 +32,12 @@ HoegreSide= np.transpose(HoegreSide)
 MatInv = np.linalg.inv(Mat)
 # Finn koeffisientane ved å multiplisere den inverterte matrisa med y-vektoren
 Coeff = np.matmul(MatInv, HoegreSide)
+
+# Skriv splinen til skjerm
+print(f'p_0 = {Coeff[0]:.2f}x + {Coeff[1]:.2f}')
+print(f'p_1 = {Coeff[2]:.2f}x + {Coeff[3]:.2f}')
+print(f'p_2 = {Coeff[4]:.2f}x + {Coeff[5]:.2f}')
+
 
 #
 # Plottar splinen - saman med punkta som skal interpolerast
