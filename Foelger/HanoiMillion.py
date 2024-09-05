@@ -1,16 +1,18 @@
-"""
-Dette skriptet reknar brukar vi for aa finne ut kor mange ringar vi kan
+"""Dette skriptet reknar brukar vi for aa finne ut kor mange ringar vi kan
 ha i Hanoi-taarna foer antal flytt bikkar ein million.
-Skriptet brukar ei while-l�kke
+Skriptet brukar ei while-løkke
 """
 
 
 # Startkrav
-a0 = 1
+a1 = 1
 
 # Initierar a og indeksen n
-a = a0
+a = a1
 n = 1
+
+# Skriv til skjerm
+print(n, a)
 
 # Gjentar saa lenge talet på flytt er mindre enn ein million
 while a < 1000000:              
@@ -22,4 +24,4 @@ while a < 1000000:
     n = n + 1
     print(n, a)
     
-print('Antal ringar når vi bikkar ein million flytt: ', n)
+print(f'Antal ringar når vi bikkar ein million flytt: {n}')
