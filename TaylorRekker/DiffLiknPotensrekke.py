@@ -29,15 +29,13 @@ y0 = -1/2
 # Vektorar med x- og y-verdiar
 x = np.linspace(0, 2, 200)
 y_exact = (1/3+y0)*np.exp(2*x)-1/3*np.exp(-x)
-#LL = len(x)                          # Hente talet på punkt
-
 
 # Initierar c-koeffisienten og tilnærma løysing
 c = y0
 yTrunk = c*np.ones_like(x)
 n = 0
 # Itererar ved aa auke trunkeringsgrensa N
-while n <= Nmax: 
+while n < Nmax: 
   plt.show()
   # Oppdaterar c, n og yTrunk
   c = (2*c + (-1)**n/np.math.factorial(n))/(n+1)
