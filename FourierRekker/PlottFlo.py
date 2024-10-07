@@ -1,4 +1,4 @@
-"""Dette skriptet plottar ein modell for flo og fjoere.
+"""Dette skriptet plottar ein modell for flo og fjøre.
 """
 
 # Bibliotek
@@ -13,7 +13,7 @@ plt.figure(1)
 plt.clf()
 # Plottar modellen
 plt.plot(t, V, 'b-')
-# Plottar tidspunkta då vannstanden er 0.5 m
+# Plottar tidspunkta då vass-standen er 0.5 m
 plt.hlines(0.5, 0, 24, colors = 'black', linestyles = 'dashed')
 plt.plot([0.28, 3.14, 12.60, 15.46], 0.5*np.ones(4), 'ro')
 plt.xlabel('Tid [timar]')
