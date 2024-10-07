@@ -1,6 +1,5 @@
-
-"""
-Skriptet plottar ein periodisk funksjon saman med trunkterte Fourier-rekker 
+# -*- coding: utf-8 -*-
+"""Skriptet plottar ein periodisk funksjon saman med trunkterte Fourier-rekker 
 av stadig høgare orden.
 
 Funksjonen er 1 mellom 0 og pi og -1 mellom -pi og 0. Perioden er 2 pi.
@@ -31,8 +30,8 @@ n = 0
 # Itererar ved aa auke trunkeringsgrensa N
 while n <= Nmax: 
   # Nytt plott
-  plt.close()
   plt.figure(1)
+  plt.clf()
   # Plottar sjølve funksjonen (tre periodar)
   plt.plot([0, np.pi], [1, 1], 'k-')
   plt.plot([np.pi, 2*np.pi], [-1, -1], 'k-')
@@ -45,7 +44,7 @@ while n <= Nmax:
   # Set tittelen
   TitleStr = f'Fourier-sum med N = {2*n+1}'
   plt.title(TitleStr)
-  plt.grid()                                # Rutenett
+  plt.grid(visible = True)              # Rutenett
   plt.show()
   # Oppsdaterar n
   # Oppdaterar koeffisientane a og b - og sjølve Fourier-summen y
@@ -54,6 +53,3 @@ while n <= Nmax:
   n = n+1
   # Legg inn ein pause
   dummy = input('Hit enter')
-  
-  
-  
