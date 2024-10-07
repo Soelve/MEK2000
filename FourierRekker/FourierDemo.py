@@ -1,5 +1,5 @@
-"""
-Skriptet plottar ein periodisk funksjon saman med trunkterte Fourier-rekker 
+# -*- coding: utf-8 -*-
+"""Skriptet plottar ein periodisk funksjon saman med trunkterte Fourier-rekker 
 av stadig høgare orden.
 
 Mellom -3 og 0 er funksjonen lik -x, mellom 0 og 3 er den konstant lik 0.
@@ -32,18 +32,18 @@ n = 0
 # Itererar ved aa auke trunkeringsgrensa N
 while n <= Nmax: 
   # Nytt plott
-  plt.close()
   plt.figure(1)
+  plt.clf()
   # Plottar sjølve funksjonen (tre periodar)
   plt.plot([-3, 0, 3], [3, 0, 0], 'k-')
   plt.plot([3, 6, 9], [3, 0, 0], 'k-')
   plt.plot([-9, -6, -3], [3, 0, 0], 'k-')
   # Plottar Fourier-summen for den aktuelle trunkeringa
-  plt.plot(x,y, 'r--')
+  plt.plot(x, y, 'r--')
   # Set tittelen
   TitleStr = f'Fourier-sum med N = {n}'
   plt.title(TitleStr)
-  plt.grid()                                # Rutenett
+  plt.grid(visible = True)          # Rutenett
   plt.show()
   # Oppsdaterar n
   n = n+1
@@ -55,6 +55,3 @@ while n <= Nmax:
       y = y + a*np.cos(n*w*x)
   # Legg inn ein pause
   dummy = input('Hit enter')
-  
-  
-  
