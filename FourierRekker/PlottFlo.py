@@ -15,7 +15,7 @@ plt.clf()
 plt.plot(t, V, 'b-')
 # Plottar tidspunkta då vannstanden er 0.5 m
 plt.hlines(0.5, 0, 24, colors = 'black', linestyles = 'dashed')
-plt.plot([0.28, 3.09, 12.60, 15.41], 0.5*np.ones(4), 'ro')
+plt.plot([0.28, 3.14, 12.60, 15.46], 0.5*np.ones(4), 'ro')
 plt.xlabel('Tid [timar]')
 plt.ylabel('Vannstand [meter]')
 plt.grid(visible=True)
