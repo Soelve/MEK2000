@@ -1,5 +1,5 @@
-"""
-Skriptet plottar ein periodisk funksjon saman med trunkterte Fourier-rekker 
+# -*- coding: utf-8 -*-
+"""Skriptet plottar ein periodisk funksjon saman med trunkterte Fourier-rekker 
 av stadig høgare orden.
 
 Funksjonen er absoluttverdien av x - med periode 2.
@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Bestemme maksimal N-verdi (input)
-Nmax = 10
+Nmax = 20
 
 # Periode og frekvens
 T = 2
@@ -29,18 +29,18 @@ a = 1/2
 y = a*np.ones(Npkt)
 n = 0
 # Itererar ved aa auke trunkeringsgrensa N
-while n <= Nmax: 
+while 2*n <= Nmax: 
   # Nytt plott
-  plt.close()
   plt.figure(1)
+  plt.clf()
   # Plottar sjølve funksjonen (tre periodar)
   plt.plot([-1, 0, 1], [1, 0, 1], 'k-')
   plt.plot([-3, -2, -1], [1, 0, 1], 'k-')
   plt.plot([1, 2, 3], [1, 0, 1], 'k-')
   # Plottar Fourier-summen for den aktuelle trunkeringa
-  plt.plot(x,y, 'r--')
+  plt.plot(x, y, 'r--')
   # Set tittelen
-  TitleStr = f'Fourier-sum med N = {2*n-1}'
+  TitleStr = f'Fourier-sum med N = {2*n}'
   plt.title(TitleStr)
   plt.grid()                                # Rutenett
   plt.show()
@@ -51,7 +51,3 @@ while n <= Nmax:
   n = n+1
   # Legg inn ein pause
   dummy = input('Hit enter')
-  
-  
-  
-  
