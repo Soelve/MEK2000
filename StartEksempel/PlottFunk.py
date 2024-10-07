@@ -1,5 +1,4 @@
-"""
-Dette skriptet plottar ein funksjon.
+"""Dette skriptet plottar ein funksjon.
 Sjølve funksjonen og intervallet vi vil plotte i er
 hard-koda inn i starten. 
 Vi har også hardkoda inn antal punkt vi brukar til plottinga
