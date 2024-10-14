@@ -1,6 +1,5 @@
 
-"""
-Skriptet plottar ein funksjon saman med trunkterte Fourier-rekker 
+"""Skriptet plottar ein funksjon saman med trunkterte Fourier-rekker 
 av stadig høgare orden for dei halvperiodiske utvidingane - både 
 den jamne og den odde utviginda.
 
