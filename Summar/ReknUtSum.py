@@ -7,10 +7,9 @@ starten - hardkoda det også.
 
 # Importere
 import numpy as np
-import math
 
 # Øvre grense
-N = 100000
+N = 1000
 # Nedre grense
 n0 = 1
 
@@ -22,7 +21,8 @@ for n in range(n0,N+1):
   S = S + an
 
 # Skriv svaret til skjerm:
-#print(S)
+print(f'Sum: {S:.5f}')
+
+# Samanliknar med eventuell fasit
 Fasit = np.pi**2/6
-#print(Fasit)
-print('Feil: ', Fasit-S)
+print(f'Feil: {np.abs(Fasit-S):.5f}')
