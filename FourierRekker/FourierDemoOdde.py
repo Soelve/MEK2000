@@ -29,6 +29,10 @@ y = np.zeros(Npkt)
 n = 0
 # Itererar ved aa auke trunkeringsgrensa N
 while n <= Nmax: 
+  # Oppdaterar koeffisientane a og b - og sjølve Fourier-summen y
+  b = 4/(np.pi*(2*n+1))
+  y = y + b*np.sin((2*n+1)*w*x)
+  
   # Nytt plott
   plt.figure(1)
   plt.clf()
@@ -46,10 +50,9 @@ while n <= Nmax:
   plt.title(TitleStr)
   plt.grid(visible = True)              # Rutenett
   plt.show()
-  # Oppsdaterar n
-  # Oppdaterar koeffisientane a og b - og sjølve Fourier-summen y
-  b = 4/(np.pi*(2*n+1))
-  y = y + b*np.sin((2*n+1)*w*x)
+
+  # Oppdaterar n
   n = n+1
+
   # Legg inn ein pause
   dummy = input('Hit enter')
