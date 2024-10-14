@@ -1,5 +1,4 @@
-"""
-Dette skriptet reknar ut ein sum.
+"""Dette skriptet reknar ut ein sum.
 Her er uttrykket for ledda i summen hardkoda
 inni løkka. 
 Øvre grense for summen er gitt som input i 
