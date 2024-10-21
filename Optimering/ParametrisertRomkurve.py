@@ -1,5 +1,4 @@
-"""
-Dette skriptet plottar ei kurve i rommet.
+"""Dette skriptet plottar ei kurve i rommet.
 Koordinatane x, y og z er alle gitt ved parameteren t.
 
 Funksjonsuttrykka og grensene for t er hardkoda i 
