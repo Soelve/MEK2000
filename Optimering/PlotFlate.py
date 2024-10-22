@@ -1,5 +1,4 @@
-"""
-Dette skriptet plottar ei flate i rommet.
+"""Dette skriptet plottar ei flate i rommet.
 Funksjonsuttrykket og grensene for x og y er hardkoda i 
 starten av skriptet.
 """
