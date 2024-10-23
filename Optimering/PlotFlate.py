@@ -10,7 +10,6 @@ from matplotlib import cm            # Fargekart
 
 # Funksjon som vi vil plotte
 def funk(x,y):
-#    return 1/(np.exp(2*x**2-2*x*y+5*y**2+2*x+2*y+1)+1)
     return 1/(x**2-x*y+2*y**2+x+y+1)
 
 # Grenser for x og y (hardkoda)
