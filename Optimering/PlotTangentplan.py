@@ -11,7 +11,7 @@ from matplotlib import cm               # Fargekart
 
 # Funksjon som vi vil plotte
 def funk(x,y):
-    return 1/(x**2-x*y+0.5*y**2-x+1)
+    return 1 - x**2-x*y - 2*y**2
 
 # Punktet vi tar utgangspunkt i
 x0 = 0
