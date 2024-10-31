@@ -4,8 +4,6 @@ til ein funksjon.
 Startpunkt, (x_0, y_0), funksjonen vi skal minimere og såkalla learning rate,
 gamma, er hardkoda i starten. I tillegg har vi fiksert parameteren h, som
 blir brukt til å estimere dei partielle deriverte.
-
-Skriptet lener seg tunkt på skriptet PlotBrattasteStiTilTopps.py
 """
 
 # Bibliotek
