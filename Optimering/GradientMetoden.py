@@ -29,24 +29,24 @@ def funk(x, y):
     return np.exp(-(x**2 + y**2))
 
 # Initiere
-x = x0
-y = y0
+xNy = x0
+yNy = y0
 GradVal = 1e5               # Finn på ein tilfeldig, høg verdi
 
 while GradVal > L:
+    # Kopierar dei gamle verdiane
+    x = xNy
+    y = yNy
     # Deriverte
     dfdx = (funk(x+h, y) - funk(x-h, y))/(2*h)
     dfdy = (funk(x, y+h) - funk(x, y-h))/(2*h)
     # Oppdaterar punkt
-    x = x + gamma*dfdx
-    y = y + gamma*dfdy
+    xNy = x + gamma*dfdx
+    yNy = y + gamma*dfdy
     # Lengda av gradienten
     GradVal = np.sqrt(dfdx**2 + dfdy**2)
-    # Skrive framdrift til skjerm
-    print(f'(x, y, z) = ({x:.2e}, {y:.2e}, {funk(x,y):.2e})')
     
 # Skriv resultat til skjerm
 z = funk(x, y)
 print(f'Maksimalverdi: {z:.4f}')
-print(f'Maksimalpunkt: x={x:.4f} og y={y:.4f}')
-      
+print(f'Maksimalpunkt: x={x:.4f} og y={y:.4f}')     
