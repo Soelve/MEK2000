@@ -1,5 +1,4 @@
-"""
-Dette skriptet implementerar metoden gradient descent for å finne minimalpunkt
+"""Dette skriptet implementerar metoden gradient descent for å finne minimalpunkt
 til ein funksjon. 
 Startpunkt, (x_0, y_0), funksjonen vi skal minimere og såkalla learning rate,
 gamma, er hardkoda i starten. I tillegg har vi fiksert parameteren h, som
@@ -51,18 +50,20 @@ zOld = z - 1e5
 
 #
 while z > zOld:
-    # Kopierar z til zOld
+    # Kopierar
+    xOld = x
+    yOld = y
     zOld = z
     # Skriv x, y og z til vektor (utvikdar vektorane)
     xVektor = xVektor + [x] 
     yVektor = yVektor + [y] 
     zVektor = zVektor + [z]    
     # Partielle deriverte
-    dFdx = (funk(x+h, y) - funk(x-h, y))/(2*h)
-    dFdy = (funk(x, y+h) - funk(x, y-h))/(2*h)
+    dFdx = (funk(xOld+h, yOld) - funk(xOld-h, yOld))/(2*h)
+    dFdy = (funk(xOld, yOld+h) - funk(xOld, yOld-h))/(2*h)
     # Steg i retning av gradienten
-    x = x + gamma*dFdx
-    y = y + gamma*dFdy
+    x = xOld + gamma*dFdx
+    y = yOld + gamma*dFdy
     z = funk(x,y)
     
 # Ny 3d-figur til å lage flateplott
