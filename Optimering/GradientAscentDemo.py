@@ -15,7 +15,7 @@ from matplotlib import cm            # Fargekart
 
 # Funksjon som vi vil plotte
 def funk(x,y):
-    return -1/((x-1)**2+(y-2)**2+1) - 1/((x-4)**2+(y-3)**2+2)
+    return 1/((x-1)**2+(y-2)**2+1) + 1/((x-4)**2+(y-3)**2+2)
 
 # Steglengda - Parameter brukt til å estimere partielle deriverte
 # og til å lage stien mot toppen
@@ -49,10 +49,10 @@ xVektor = []
 yVektor = []
 zVektor = []
 # Set laag verdi for zOld - for at loekka skal komme i gang
-zOld = 1e5
+zOld = z - 1e5
 
 #
-while z < zOld:
+while z > zOld:
     # Kopierar z til zOld
     zOld = z
     # Skriv x, y og z til vektor (utvikdar vektorane)
@@ -63,8 +63,8 @@ while z < zOld:
     dFdx = (funk(x+h, y) - funk(x-h, y))/(2*h)
     dFdy = (funk(x, y+h) - funk(x, y-h))/(2*h)
     # Steg i retning av gradienten
-    x = x - gamma*dFdx
-    y = y - gamma*dFdy
+    x = x + gamma*dFdx
+    y = y + gamma*dFdy
     z = funk(x,y)
     
 # Ny 3d-figur til å lage flateplott
