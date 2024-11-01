@@ -10,7 +10,7 @@ from matplotlib import cm            # Fargekart
 
 # Funksjon som vi vil plotte
 def funk(x,y):
-    return np.exp(-(x**2+y**2/2))
+    return np.exp(-(2*x**2+x*yy**2))
 
 # Steglengda - Parameter brukt til å estimere partielle deriverte
 # og til å lage stien mot toppen
