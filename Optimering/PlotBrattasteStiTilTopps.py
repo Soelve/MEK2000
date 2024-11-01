@@ -24,8 +24,8 @@ yMin = -2
 yMax = 2
 
 # Startpunkt
-x0 = 1
-y0 = 1
+x0 = -1
+y0 = 2
 z0 = funk(x0, y0)
 
 # Vektor - og matriser - med funksjonsverdiar (200 pkt i kvar retning)
