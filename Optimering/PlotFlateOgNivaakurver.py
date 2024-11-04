@@ -1,6 +1,6 @@
-"""
-Dette skriptet plottar ei flate i rommet.
-Den gjer det på to måtar - direkte som eit flateplott
+# -*- coding: utf-8 -*-
+"""Dette skriptet plottar ei flate i rommet.
+Den gjer det på tre måtar - direkte som eit flateplott, som fargekart
 og som nivåkurver.
 
 Funksjonsuttrykket og grensene for x og y er hardkoda i 
@@ -10,7 +10,7 @@ starten av skriptet.
 # Bibliotek
 import numpy as np
 import matplotlib.pyplot as plt 
-from matplotlib import cm            # Fargekart
+#from matplotlib import cm            # Fargekart
 
 # Funksjon som vi vil plotte
 def funk(x,y):
@@ -36,14 +36,27 @@ fig = plt.figure(1)
 plt.clf()
 ax = fig.add_subplot(111, projection='3d')
 # Lagar flateplott i rommet
-surf = ax.plot_surface(xx, yy, zz, cmap = cm.magma)
+surf = ax.plot_surface(xx, yy, zz, cmap = 'magma')
 # Tekst på aksane
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 
 
+# Ny figur til å lage fargekart
+# Plott fargekart
+plt.figure(2)
+plt.clf()
+plt.pcolormesh(xx, yy, zz, shading = 'auto', cmap = 'viridis')
+plt.colorbar()
+
+# Tekst på aksane
+plt.xlabel('x')
+plt.ylabel('y')
+
+plt.show()
+
 # Ny figur til å lage nivåkurver
-fig2 = plt.figure(2)
+fig2 = plt.figure(3)
 plt.clf()
 ax2 = fig2.subplots(1, 1)
 # Lagar nivåkurver
