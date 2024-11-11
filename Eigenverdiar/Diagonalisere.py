@@ -1,5 +1,4 @@
-"""
-Dette skriptet finn eigenverdiane og (normaliserte) eigenvektorar
+"""Dette skriptet finn eigenverdiane og (normaliserte) eigenvektorar
 til ei matrise. Denne matrisa, input, er hardkoda i starten.
 """
 
@@ -10,11 +9,11 @@ import numpy as np
 Mat = [[1, 2], 
        [0, 2]]
 
-####### Slutt på input ##################
-
 # Finn eigenverdiar og eigenvektorar
 eval, evec = np.linalg.eig(Mat)
 
 # Skriv eigenverdiar og -vektorar til skjerm
+print('Vektor med eigenverdiar:')
 print(eval)
+print('Matrise med tilsvarande normaliserte eigenvektorar som søyler:')
 print(evec)
