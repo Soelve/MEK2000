@@ -3,7 +3,7 @@ radioaktivitet og brukar dette til å estimere ein eksponentiell
 samanheng mellom tid og radioaktivitet. Denne kan, i sin tur, brukast
 til å estimere halveringstida for den radioaktive isotopen.
 Vi gjer dette ved å bruke lineær regresjon med minste kvadraters metode
-på logaritmen (den naturlege logaritmen) på dei sampla data. 
+på logaritmen (den naturlege logaritmen) av dei sampla data. 
 """
 
 # Bibliotek
@@ -62,3 +62,4 @@ plt.xlabel('Tid')
 plt.ylabel('A(t)')
 plt.grid(visible = True)                           		# Legg på rutenett  
 plt.show()
+
