@@ -35,5 +35,5 @@ for n in range(1,N):
     T = T + dx*funk(x)              # Oppdaterar summen T
     
 # Skriv resultat til skjerm
-
 print('T=', T)    
+
