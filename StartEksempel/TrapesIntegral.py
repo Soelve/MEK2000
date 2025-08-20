@@ -32,7 +32,8 @@ T = dx/2*(funk(a) + funk(b))
 x = a                               # Startverdi for x
 for n in range(1,N):
     x = x + dx                      # Oppdaterar x
-    T = dx*funk(x)                  # Oppdaterar summen T
+    T = T + dx*funk(x)              # Oppdaterar summen T
     
 # Skriv resultat til skjerm
+
 print('T=', T)    
