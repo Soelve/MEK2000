@@ -2,7 +2,7 @@
 This repository contains source code used in the course Matematikk 2000 at Oslo Metropolitan University.
 The course is taught in Norwegian, and all code is commented in Norwegian. Correspondingly, the remainder of this readme file will also be provided in Norwegian
 
-Dei aktuelle emna i kurest MEK2000 - matematikk 2000 for maskin-, elektro- og kjemi-ingeinørar, spenner ganske vidt. 
+Dei aktuelle emna i kurset MEK2000 - matematikk 2000 for maskin-, elektro- og kjemi-ingeinørar, spenner ganske vidt. 
 Men numeriske berekningar og visualiseringar har sin naturlege plass når det gjeld så godt som alle.
 Her er det lagt ut skript som blir brukt i den samanhengen. Nokre er meint for å brukast til konkret problemløsying, andre er meint for å illustrere teori.
 
