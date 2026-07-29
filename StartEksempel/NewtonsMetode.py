@@ -34,6 +34,6 @@ for n in range(1,Niter+1):
     x = x - funk(x)/funkDeriv(x)
     
 # Skriv svar til skjerm
-print('x=', x, n)
+print('x=', x)
     
     
