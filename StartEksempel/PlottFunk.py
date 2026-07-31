@@ -35,5 +35,11 @@ plt.plot(x_vektor, y_vektor, color = 'black')   # Svart kurve
 plt.xlabel('x')
 plt.ylabel('y')
 # Rutenett
-plt.grid()
+plt.grid('Visible')
+# Storleik på aksar
+plt.xlabel("x", fontsize=22)
+plt.ylabel("y", fontsize=22)
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
+# Vis plott
 plt.show()
