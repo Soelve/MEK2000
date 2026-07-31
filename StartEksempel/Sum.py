@@ -13,7 +13,7 @@ n_max = 5
 
 # Gir uttrykk for ledda
 def a(n):
-    return 1/(n**2+1)
+    return 1/n**3
 
 ##############################################
 
