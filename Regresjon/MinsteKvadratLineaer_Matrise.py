@@ -1,6 +1,7 @@
 """
  Dette skriptet tar utgangspunkt i eit sett med punkt og 
  bestemmer ei regresjonslinje for dei ved minste kvadraters metode.
+ Her blir koeffisientane i funksjonen rekna ut via ei matrise-likning.
 """
 
 # Bibliotek
