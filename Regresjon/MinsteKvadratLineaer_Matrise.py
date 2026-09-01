@@ -37,7 +37,7 @@ print("Koeffisientar:")
 print("a =", a)
 print("b =", b)
 
-# Plottar punkta og regresjonslinja (brukar same x-versiar som datasettet)
+# Plottar punkta og regresjonslinja (brukar same x-verdiar som datasettet)
 plt.figure(1)
 plt.clf()
 plt.plot(x, y, 'rx')  
