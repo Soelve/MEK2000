@@ -1,0 +1,73 @@
+"""Dette skriptet konstruerar ein kubisk spline for eit sett med tre punkt.
+Dette settet er hardkoda i starten av skriptet.
+Koeffisientane i polynoma blir bestemt ved å sette opp eit lineært liknings-
+system for problemet. Dette systemet blir løyst ve dat koeffisientmatrisa 
+sett opp og invertert.
+"""
+# Bibliotek
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Vektorar med punkta som skal inperpolerast
+x = [1, 2, 3]
+y = [-4, -3, 0]
+
+###### Slutt på inputs #############
+
+#
+# Set opp Koeffisient-matrisa
+#
+# Første fire likningar: Interpolere punkta (to endar, eitt indre punkt)
+# Neste likning: Kontinuerleg derivert i skøytane
+# Neste liknigr: Kontinuerleg dobbelt-derivert i skøytane
+# Nest sist: p''(x_0) = 0
+# Siste likning: p''(x_2) = 0
+Mat = [[x[0]**3, x[0]**2, x[0], 1, 0, 0, 0, 0],    
+       [x[1]**3, x[1]**2, x[1], 1, 0, 0, 0, 0],
+       [0, 0, 0, 0, x[1]**3, x[1]**2, x[1], 1],
+       [0, 0, 0, 0, x[2]**3, x[2]**2, x[2], 1],
+       [3*x[1]**2, 2*x[1], 1, 0, -3*x[1]**2, -2*x[1], -1, 0],
+       [6*x[1], 2, 0, 0, -6*x[1], -2, 0, 0],
+       [6*x[0], 2, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 6*x[2], 2, 0, 0]]
+# Høgresidene i likningane (blir gjort om til søylevektor)
+HoegreSide = np.array([y[0], y[1], y[1], y[2], 0, 0, 0, 0])
+HoegreSide= np.transpose(HoegreSide)
+
+# Gjer vektorane til søyle-vektorar
+# Bestemmer koeffisientane ved å invertere matrisa
+MatInv = np.linalg.inv(Mat)
+# Finn koeffisientane ved å multiplisere den inverterte matrisa med y-vektoren
+Coeff = np.matmul(MatInv, HoegreSide)
+
+
+# Skriv splinen til skjerm
+print(f'p_0 = {Coeff[0]:.2f} x**3 + {Coeff[1]:.2f} x**2 + {Coeff[2]:.2f} x + {Coeff[3]:.2f}')
+print(f'p_1 = {Coeff[4]:.2f} x**3 + {Coeff[5]:.2f} x**2 + {Coeff[6]:.2f} x + {Coeff[7]:.2f}')
+
+
+#
+# Plottar splinen - saman med punkta som skal interpolerast
+#
+plt.figure(1)
+plt.clf()
+plt.plot(x, y,'kx', label = 'Punkt')            # Punkta
+
+# Loopar over dei tre tredjegradsfunksjonane
+for n in range(0,2):   
+    # Lagar vektor for å plotte polynomet (50 punkt)
+    xx = np.linspace(x[n],x[n+1], 50)    
+    # Allokerar vektor for y-verdiane
+    a = Coeff[0+4*n]
+    b = Coeff[1+4*n]
+    c = Coeff[2+4*n]
+    d = Coeff[3+4*n]
+    yy = a*xx**3 + b*xx**2 + c*xx + d
+    plt.plot(xx, yy, label = 'p_{}'.format(n))
+
+# Tekst på aksane
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(visible = True)
+plt.legend()
+plt.show()
