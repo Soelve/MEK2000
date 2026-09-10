@@ -22,7 +22,3 @@ for n in range(n0,N+1):
 
 # Skriv svaret til skjerm:
 print(f'Sum: {S:.5f}')
-
-# Samanliknar med eventuell fasit
-Fasit = 1.5
-print(f'Feil: {np.abs(Fasit-S):.5f}')
