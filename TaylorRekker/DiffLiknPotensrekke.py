@@ -19,6 +19,7 @@ Skriptet plottar tilnaerminga for ulike verdiar av N. Maksimal N-verdi er
 
 # Bibliotek
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 
 # Bestemme maksimal N-verdi (input)
@@ -38,15 +39,23 @@ n = 0
 while n < Nmax: 
   plt.show()
   # Oppdaterar c, n og yTrunk
-  c = (2*c + (-1)**n/np.math.factorial(n))/(n+1)
+  c = (2*c + (-1)**n/math.factorial(n))/(n+1)
   n = n+1
   yTrunk = yTrunk + c*x**n
 
+#
 # Plottar resultatet
+#
 plt.figure(1)
 plt.clf()
+# Plottar den eksakte løysinga
 plt.plot(x, y_exact, 'k-', label = 'Eksakt loeysing')
+plt.grid(visible = True)
+plt.show()
+plt.waitforbuttonpress()                    # Ventar på tastetrykk
+# Plottar tilnærminga
 LegendEntry = f'Tilnærming med N = {n-1}'
 plt.plot(x,yTrunk, 'r--', label = LegendEntry)
 plt.grid(visible = True)
 plt.legend(loc = 'lower left')
+plt.show()
