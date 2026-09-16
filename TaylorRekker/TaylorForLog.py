@@ -24,7 +24,7 @@ P = 0*x
 fig = plt.figure(1)
 
 # Går gjennom alle N-verdiane til og med Nmax
-for n in range(1,Nmax + 1):
+for n in range(1,Nmax+1):
     # Neste ledd i Taylor-polynomet
     an = (-1)**(n-1)/n
     P = P + an*(x-1)**n
