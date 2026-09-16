@@ -18,17 +18,16 @@ def funk(x):
 x = np.linspace(0, 3, 200)
 
 # Initierer polynomet
-P = 0 * x
+P = 0*x
 
 # Startar plot
 fig = plt.figure(1)
 
 # Går gjennom alle N-verdiane til og med Nmax
 for n in range(1,Nmax + 1):
-
     # Neste ledd i Taylor-polynomet
     an = (-1)**(n-1)/n
-    P = P + an * (x-1)**n
+    P = P + an*(x-1)**n
 
     plt.clf()   # Tømmer figuren
 

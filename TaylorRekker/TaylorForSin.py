@@ -1,6 +1,6 @@
 """Skript som plottar Taylor-polynoma, opp til 
  ein bestemt orden, for funksjonen
- f(x) = e^x omkring x=0.
+ f(x) = sin x omkring x=0.
  Den maksimale ordenen til funksjonen er input."""
 
 # Bibliotek
@@ -8,15 +8,15 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-# Maksimal orden
-Nmax = 5
+# Maksimalt antal ledd
+Mmax = 4
 
 # Funksjonen
 def funk(x):
-    return np.exp(x)
+    return np.sin(x)
 
 # Vektor med x-verdiar
-x = np.linspace(-2, 2, 200)
+x = np.linspace(-3*np.pi, 3*np.pi, 200)
 
 # Initierer polynomet
 P = 0*x
@@ -25,9 +25,11 @@ P = 0*x
 fig = plt.figure(1)
 
 # Går gjennom alle N-verdiane til og med Nmax
-for n in range(Nmax + 1):
+for m in range(Mmax+1):
+    # Tilordnar graden
+    n = 2*m+1
     # Neste ledd i Taylor-polynomet
-    an = 1/math.factorial(n)
+    an = (-1)**m/math.factorial(n)
     P = P + an*x**n
 
     plt.clf()   # Tømmer figuren
@@ -37,7 +39,7 @@ for n in range(Nmax + 1):
     # Plottar Taylor-polynomet
     plt.plot(x, P, 'r--', linewidth=2)          # Plottar tilnærminga
     
-    plt.ylim(0, 8)                              # Grenser for y-aksen
+    plt.ylim(-2,2)                              # Grenser for y-aksen
     plt.grid(True)                              # Set på rutenett
     plt.title(f'n = {n}')                       # Tittel på figuren
 
