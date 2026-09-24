@@ -1,4 +1,3 @@
-
 """Skriptet plottar ein funksjon saman med trunkterte Fourier-rekker 
 av stadig høgare orden for dei halvperiodiske utvidingane - både 
 den jamne og den odde utviginda.
@@ -58,6 +57,9 @@ while n <= Nmax:
   b = 8/np.pi**3/(2*n-1)**3
   yJ = yJ + a*np.cos(2*n*w*x)
   yO = yO + b*np.sin((2*n-1)*w*x)
+  
   # Legg inn ein pause
-  dummy = input('Hit enter')
+  plt.show(block=False)
+  plt.pause(0.1)
+  plt.waitforbuttonpress()
   
