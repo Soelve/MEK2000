@@ -45,11 +45,15 @@ while n <= Nmax:
   # Plottar sjølve funksjonen (ein halv periode)
   plt.plot(xPeriod, yPeriod, 'k-', linewidth = 2)
   # Plottar Fourier-summen for den aktuelle trunkeringa
-  plt.plot(x , yJ, 'r--', linewidth = 1)
-  plt.plot(x , yO, 'b-.', linewidth = 1)
+  plt.plot(x , yJ, 'r--', linewidth = 1, label = 'Jamn utviding')
+  plt.plot(x , yO, 'b-.', linewidth = 1, label = 'Odde utviding')
   plt.grid()                                # Rutenett
   plt.axis([-2*T, 3*T, -.3, .3])
-  plt.show()
+  # Pyntar på plottet
+  TitleStr = f'Fourier-sum med N = {n}'
+  plt.title(TitleStr)
+  plt.legend()
+  
   # Oppsdaterar n
   n = n+1
   # Oppdaterar koeffisientane a og b - og sjølve Fourier-summen y
