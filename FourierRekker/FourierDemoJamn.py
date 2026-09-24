@@ -50,4 +50,6 @@ while 2*n <= Nmax:
   y = y + a*np.cos((2*n+1)*w*x)
   n = n+1
   # Legg inn ein pause
-  dummy = input('Hit enter')
+  plt.show(block=False)
+  plt.pause(0.1)
+  plt.waitforbuttonpress()
