@@ -49,10 +49,11 @@ while n <= Nmax:
   TitleStr = f'Fourier-sum med N = {2*n+1}'
   plt.title(TitleStr)
   plt.grid(visible = True)              # Rutenett
-  plt.show()
-
+  
   # Oppdaterar n
   n = n+1
 
-  # Legg inn ein pause
-  dummy = input('Hit enter')
+  # Legg inn ein pause  
+  plt.show(block=False)
+  plt.pause(0.1)
+  plt.waitforbuttonpress()
