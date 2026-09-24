@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Skriptet plottar ein periodisk funksjon saman med trunkterte Fourier-rekker 
 av stadig høgare orden.
 
@@ -42,13 +41,13 @@ while 2*n <= Nmax:
   # Set tittelen
   TitleStr = f'Fourier-sum med N = {2*n}'
   plt.title(TitleStr)
-  plt.grid()                                # Rutenett
-  plt.show()
-  # Oppsdaterar n
+  plt.grid(visible=True)                                # Rutenett
+
   # Oppdaterar koeffisientane a og b - og sjølve Fourier-summen y
   a = -4/((2*n+1)*np.pi)**2
   y = y + a*np.cos((2*n+1)*w*x)
   n = n+1
+  
   # Legg inn ein pause
   plt.show(block=False)
   plt.pause(0.1)
