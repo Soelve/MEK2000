@@ -57,7 +57,7 @@ while n <= Nmax:
       a = -6/(n*np.pi)**2
       y = y + a*np.cos(n*w*x)
   
-    # Legg inn ein pause
+  # Legg inn ein pause
   plt.show(block=False)
   plt.pause(0.1)
   plt.waitforbuttonpress()
