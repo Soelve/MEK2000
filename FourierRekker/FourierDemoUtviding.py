@@ -23,7 +23,7 @@ T = 2
 w = 2*np.pi/T
 
 # Vektor for éin periode
-NpktPeriod = 100
+NpktPeriod = 300
 xPeriod = np.linspace(0, T/2, NpktPeriod)
 yPeriod = xPeriod*(1-xPeriod)
 
@@ -47,6 +47,7 @@ while n <= Nmax:
   # Plottar Fourier-summen for den aktuelle trunkeringa
   plt.plot(x , yJ, 'r--', linewidth = 1, label = 'Jamn utviding')
   plt.plot(x , yO, 'b-.', linewidth = 1, label = 'Odde utviding')
+  plt.ylim(-.3,.3)
   plt.grid()                                # Rutenett
   plt.axis([-2*T, 3*T, -.3, .3])
   # Pyntar på plottet
