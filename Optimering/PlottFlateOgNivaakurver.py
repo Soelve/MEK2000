@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Dette skriptet plottar ei flate i rommet.
 Den gjer det på tre måtar - direkte som eit flateplott, som fargekart
 og som nivåkurver.
