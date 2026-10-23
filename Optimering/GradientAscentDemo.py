@@ -54,7 +54,7 @@ while z > zOld:
     xOld = x
     yOld = y
     zOld = z
-    # Skriv x, y og z til vektor (utvikdar vektorane)
+    # Skriv x, y og z til vektor (utvidar vektorane)
     xVektor = xVektor + [x] 
     yVektor = yVektor + [y] 
     zVektor = zVektor + [z]    
