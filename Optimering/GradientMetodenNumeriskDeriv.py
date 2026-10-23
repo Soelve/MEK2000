@@ -9,6 +9,10 @@ L - minimalverdien for gradient-storleiken; stoppkriterium
 h - liten verdi som blir brukt til å estimere deriverte
 x0 - startverdi for x
 y0 - startverdi for y
+
+Metoden brukar midpunktsformelen for numerisk derivasjon.
+Om vi endrar pluss til minus i linje 50 og 51 -- eller forteikne på 
+læringsraten gamma, vil den finne eit lokalt minimum i staden for maksimum.
 """
 
 # Bibliotek
@@ -33,6 +37,8 @@ xNy = x0
 yNy = y0
 GradVal = 1e5               # Finn på ein tilfeldig, høg verdi
 
+# Telle-variabel
+n = 0
 while GradVal > L:
     # Kopierar dei gamle verdiane
     x = xNy
@@ -45,6 +51,11 @@ while GradVal > L:
     yNy = y + gamma*dfdy
     # Lengda av gradienten
     GradVal = np.sqrt(dfdx**2 + dfdy**2)
+
+    # Oppdaterar telle-variabel og skriv svar kvar 10. iterasjon til skjerm
+    n = n+1
+    if np.mod(n,10) == 0:
+        print(f'n={n}, x={x:.5f}, y={y:.5f}')    
     
 # Skriv resultat til skjerm
 z = funk(x, y)
